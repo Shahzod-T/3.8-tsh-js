@@ -48,17 +48,35 @@ var elSpan4 = document.querySelector(".data__span__plane")
 
 elForm.addEventListener("submit", function(event){
   event.preventDefault();
+
+
+
   
   var elInputVal = elInput.value;
   var Span = 3.6;
   var Span2 = 20;
   var Span3 = 70;
   var Span4 = 800;
-  
-  elSpan.textContent = Math.floor(elInputVal / Span);
-  elSpan2.textContent = Math.floor (elInputVal / Span2);
-  elSpan3.textContent = Math.floor (elInputVal / Span3);
-  elSpan4.textContent = Math.floor (elInputVal / Span4);
+
+
+
+  function infos (){
+    return elInputVal / Span
+  } 
+  function infos2 (){
+    return elInputVal / Span2
+  } 
+  function infos3 (){
+    return elInputVal / Span3
+  } 
+  function infos4 (){
+    return elInputVal / Span4
+  }
+  elSpan.textContent = infos().toFixed(2);
+  elSpan2.textContent = infos2().toFixed(2);
+  elSpan3.textContent = infos3().toFixed(2);
+  elSpan4.textContent = infos4().toFixed(2);
+
   
 });
 
